@@ -1,0 +1,15 @@
+{
+    "name": "mickaelandrieu/doctrineorm-skill",
+    "type": "jarvis-skill",
+    "require": {
+        "doctrine/orm": "~2.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jarvis\\Skill\\DoctrineORM\\": "src/"
+        }
+    }
+}
