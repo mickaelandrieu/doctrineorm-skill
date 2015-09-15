@@ -1,5 +1,5 @@
 <?php
-namespace Jarvis\Skill\Debug;
+namespace Jarvis\Skill\DoctrineORM;
 
 use Jarvis\Jarvis;
 use Jarvis\Skill\DependencyInjection\ContainerProviderInterface;
