@@ -12,7 +12,7 @@ class ContainerProvider implements ContainerProviderInterface
     /**
      * {@inheritdoc}
      */
-    public static function hydrate(Jarvis $jarvis)
+    public function hydrate(Jarvis $jarvis)
     {
         /* DBAL */
 		$jarvis['dbal_config'] = new \Doctrine\DBAL\Configuration();
