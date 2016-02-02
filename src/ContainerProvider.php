@@ -23,7 +23,7 @@ class ContainerProvider implements ContainerProviderInterface
     		$jarvis['dbal_config'] = new \Doctrine\DBAL\Configuration();
     		$jarvis->lock('dbal_config');
 
-    		$jarvis['dbal_connection'] = function ($jarvis) {
+    		$jarvis['dbal_connection'] = function ($jarvis) use ($doctrineConfig) {
     		    return \Doctrine\DBAL\DriverManager::getConnection($doctrineConfig['db'], $jarvis->dbal_config);
     		};
 
@@ -35,7 +35,7 @@ class ContainerProvider implements ContainerProviderInterface
     		    return \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($jarvis['doctrine_orm.entity_path'], $jarvis['doctrine_orm.debug']);
     		};
 
-    		$jarvis['doctrine_orm.entity.manager'] = function ($jarvis) {
+    		$jarvis['doctrine_orm.entity.manager'] = function ($jarvis) use ($doctrineConfig) {
     		    return \Doctrine\ORM\EntityManager::create($doctrineConfig['db'], $jarvis['doctrine.orm_config']);
     		};
     }
