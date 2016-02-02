@@ -2,23 +2,25 @@
 
 ## Installation
 
-you need to install it using composer and then be sure that this configuration 
+you need to install it using composer and then be sure that this configuration
 is available when Jarvis Application is started:
 
 ```php
 <?php
 /* config.php */
-const DOCTRINE_CONFIG = [
-    'db' => [
-        'dbname' => 'backbee',
-        'user' => 'root',
-        'password' => 'A1nges6!',
-        'host' => 'localhost',
-        'driver' => 'pdo_mysql',
-    ],
-    'orm' => [
-        'debug' => false,
-        'entity_path' => __DIR__.'/src/Entity'
+$config = [
+    'doctrine' => [
+        'db' => [
+            'dbname' => 'backbee',
+            'user' => 'root',
+            'password' => 'A1nges6!',
+            'host' => 'localhost',
+            'driver' => 'pdo_mysql',
+        ],
+        'orm' => [
+            'debug' => false,
+            'entity_path' => __DIR__.'/src/Entity'
+        ]
     ]
 ];
 ```
