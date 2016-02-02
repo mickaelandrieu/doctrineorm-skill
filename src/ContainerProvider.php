@@ -16,7 +16,7 @@ class ContainerProvider implements ContainerProviderInterface
     {
         $doctrineConfig = $jarvis->settings->get('doctrine', []);
 
-        if (empty($dbConfig)) {
+        if (empty($doctrineConfig)) {
             throw new \LogicException('You need to configure DoctrineORM Skill.');
         }
         /* DBAL */
